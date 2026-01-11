@@ -4,7 +4,7 @@ Greenden-PlantWorld is a minimal and responsive frontend project built using HTM
 The project demonstrates a unique navigation behavior where a single hamburger menu icon cycles through multiple pages in a fixed order, while maintaining state across page reloads.
 
 🚀 Live Demo
-🔗 Live Site: (Add your GitHub Pages link here)
+🔗 Live Site: https://manjulashanmugam.github.io/Greenden-PlantsWorls-TailwindCSS/
 
 📂 GitHub Repository
 🔗 Repository: https://github.com/manjulashanmugam/Greenden-PlantsWorls-TailwindCSS.git
