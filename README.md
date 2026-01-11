@@ -7,7 +7,7 @@ The project demonstrates a unique navigation behavior where a single hamburger m
 🔗 Live Site: (Add your GitHub Pages link here)
 
 📂 GitHub Repository
-🔗 Repository: https://github.com/manjulashanmugam/Greenden-Tailwind.git
+🔗 Repository: https://github.com/manjulashanmugam/Greenden-PlantsWorls-TailwindCSS.git
 
 ✨ Features
 
