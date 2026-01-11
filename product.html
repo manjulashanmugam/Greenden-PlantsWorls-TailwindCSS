@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <title>Greenden-PlantWorld</title>
+</head>
+
+<body>
+    <!--Responsive navbar-->
+    <div class="font-['EB Garamond']">
+        <nav class="bg bg-black p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
+            <h1 class="text-5xl" style="color: #008000">Greenden<a><i class="fa-solid fa-leaf fa-lg"
+                        style="color: #008000;"></i></a></h1>
+            <button id="menuBar">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 sm:hidden md:hidden text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <!-- JavaScript -->
+            <script>
+                const pages = ["contact.html", "product.html", "index.html"];
+
+                let clickCount = localStorage.getItem("clickCount");
+                clickCount = clickCount ? parseInt(clickCount) : 0;
+
+                document.getElementById("menuBar").onclick = () => {
+                    window.location.href = pages[clickCount];
+                    clickCount = (clickCount + 1) % pages.length;
+                    localStorage.setItem("clickCount", clickCount);
+                };
+            </script>
+
+            <ul class="flex gap-5 text-gray-600 hidden md:flex">
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-user fa-lg" style="color: white;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="product.html">
+                        <i class="fa-solid fa-cart-shopping fa-lg" style="color: white;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-address-book fa-lg" style="color: white;"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- search section -->
+        <section class="bg p-5 bg-black">
+            <h1 class="text-bold text-[#008000] text-center font-bold md:text-4xl">
+                Create a beautiful garden
+            </h1>
+            <div
+                class="flex w-[95%] m-auto p-1 rounded-4xl justify-between items-center bg-white mt-5 md:w-[80%] md:p-1">
+                <div class="flex justify-center items-center">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #003011"></i><input
+                        class="ml-1 focus:outline-none" type="text" placeholder="search products" />
+                </div>
+
+                <div>
+                    <button
+                        class=" hover:-translate-x-1 hover:bg-white border border-[#008000] px-3 py-1 bg-[#008000] rounded-4xl font-bold md:px-7 md:py-2.5">
+                        search
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- produts section -->
+        <section class="p-10 bg bg-black">
+            <h1 class=" text-[1rem] font-bold text-[#008000] text-center md:text-5xl">Products
+            </h1>
+            <div
+                class=" gap-x-2 md:gap-x-0 grid grid-cols-2 md:grid-cols-3 justify-center items-center max-w-5xl mx-auto my-10 gap-y-12">
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/soil (1).jpg">
+                    <h3 class=" md:font-bold">Soils</h3>
+                    <p class="text-white">⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/pots.jpg">
+                    <h3 class=" md:font-bold">Pots</h3>
+                    <p class="text-white">⭐⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/plants.jpg">
+                    <h3 class=" md:font-bold">Plants</h3>
+                    <p class="text-white">⭐⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/seeds.jpg">
+                    <h3 class=" md:font-bold">Seeds</h3>
+                    <p class="text-white">⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/tools.jpg">
+                    <h3 class=" md:font-bold">Tools</h3>
+                    <p class="text-white">⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/fertilizer.jpg">
+                    <h3 class=" md:font-bold">Fertilize</h3>
+                    <p class="text-white">⭐⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/growbags.jpg">
+                    <h3 class=" md:font-bold">Grow Bags(10 Bags)</h3>
+                    <p class="text-white">⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1">
+                    <img src="./images/manure.jpg">
+                    <h3 class=" md:font-bold">Manure</h3>
+                    <p class="text-white">⭐⭐⭐⭐</p>
+                </div>
+                <div class="text-[#008000] hover:translate-x-1 hidden md:block">
+                    <img src="./images/supportstick.jpg">
+                    <h3 class=" md:font-bold">Supporting Sticks</h3>
+                    <p class="text-white">⭐⭐⭐</p>
+                </div>
+            </div>
+        </section>
+
+        </main>
+        <footer class="text-center">
+            <h1 class="bg-black text-3xl font-bold pl-11 text-[#008000] font-['Dosis'] md:text-5xl md:pl-15">
+                GREENDEN <i class="fa-solid fa-leaf pt-4" style="color: #008000"></i>
+            </h1>
+            <p class="text-white bg-black">
+                Your go-to source for sustainable and eco-friendly plants and gardening
+                products.
+            </p>
+            <div class="bg-black">
+                <i class="fa-brands fa-instagram fa-lg" style="color: #003011"></i>
+                <i class="fa-brands fa-facebook fa-lg" style="color: #003011"></i>
+                <i class="fa-brands fa-x-twitter fa-lg" style="color: #003011"></i>
+                <i class="fa-brands fa-youtube fa-lg" style="color: #003011"></i>
+            </div>
+            <p class="text-green-500 bg-black">&COPY; 2026 Greenden.com</p>
+        </footer>
+</body>
+
+</html>

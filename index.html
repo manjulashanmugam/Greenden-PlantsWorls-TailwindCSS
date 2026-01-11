@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <title>Greenden-PlantWorld</title>
+
+</head>
+
+<body>
+    <!--Responsive navbar-->
+    <div class="font-['EB Garamond']">
+        <nav class="bg bg-black p-3 flex items-center justify-between shadow-xl sticky top-0">
+            <h1 class="text-5xl" style="color: #008000">Greenden<a><i class="fa-solid fa-leaf fa-lg"
+                        style="color: #008000;"></i></a></h1>
+            <button id="menuBar">             
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 sm:hidden md:hidden text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            </button>
+            <!-- JavaScript -->
+            <script>
+                let clickCount = 0;
+
+                document.getElementById("menuBar").addEventListener("click", () => {
+                    clickCount++;
+
+                    if (clickCount === 1) {
+                        window.location.href = "contact.html";
+                    }
+                    else if (clickCount === 2) {
+                        window.location.href = "product.html";
+                    }
+                    else if (clickCount === 3) {
+                        window.location.href = "index.html"; // home page
+                        clickCount = 0; // reset
+                    }
+                });
+            </script>
+
+
+                <ul class="gap-5 text-gray-600 hidden sm:flex md:flex">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-user fa-lg" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html">
+                            <i class="fa-solid fa-cart-shopping fa-lg" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cont">
+                            <i class="fa-solid fa-address-book fa-lg" style="color: white;"></i>
+                        </a>
+                    </li>
+                </ul>
+
+        </nav >
+        <!--header section-->
+        <section class="bg-black p-4 flex justify-center">
+            <div>
+                <p class="mb-4 text-2xl" style="color: #008000;">We offer you a wide range of Artificial and Natural
+                    Flowers</p>
+                <h2 class="font-bold text-4xl mb-5" style="color: white">Plants for your Interior</h2>
+                <div>
+                    <button class="bg-#008000 rounded p-2 text-white">Shop Now</button>
+                    <button class="border border-white rounded p-2 text-white">Watch Video</button>
+                </div>
+
+                <p class="mt-5" style="color: #008000">160+ plant Species | 100+ clients</p>
+            </div>
+
+            <div class="hidden md:block p-5">
+                <img src="./images/headerimg1.jpg" alt="hearderimg" class="w-80">
+            </div>
+        </section>
+
+        <!--About section-- >
+        <section class="text-center bg-green-400">
+            <h1 class="text-4xl font-bold pt-5">Our Green Journey</h1>
+            <p class="mt-3 text-1xl font-normal">This site for those who admire the beauty and harmony of nature</p>
+
+            <div class="md:flex">
+                <div class="border border-black p-2 m-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-20 inline">
+                        <path fill-rule="evenodd"
+                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625ZM7.5 15a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 7.5 15Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H8.25Z"
+                            clip-rule="evenodd" />
+                        <path
+                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                    </svg>
+
+                    <h2 class="text-xl font-medium">Large Assortment</h2>
+                    <p>Explore a wide range of plants curated for every space and lifestyle.From elegant indoor greens
+                        to vibrant outdoor plants, we have it all.Find the perfect plant to match your home and heart.
+                    </p>
+                </div>
+                <div class="border border-black p-2 m-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-20 inline">
+                        <path
+                            d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
+                        <path
+                            d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
+                        <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+                    </svg>
+
+                    <h2 class="text-xl font-medium">Free and Fast Shipping</h2>
+                    <p>Enjoy doorstep delivery that keeps your plants fresh and healthy.We pack every order with care
+                        using eco-friendly materials.Your greenery reaches you quickly and safely.</p>
+                </div>
+                <div class="border border-black p-2 m-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-20 inline">
+                        <path fill-rule="evenodd"
+                            d="M19.5 9.75a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 1 1.5 0v2.69l4.72-4.72a.75.75 0 1 1 1.06 1.06L16.06 9h2.69a.75.75 0 0 1 .75.75Z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                    <h2 class="text-xl font-medium">24/7Support</h2>
+                    <p>Our friendly support team is always here to help you.From plant care tips to order assistance,
+                        weve got you covered.Reach out anytime and grow with confidence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Best Seller-- >
+        <section class="p-4 bg-black text-center">
+            <h1 class="font-bold mt-5 text-5xl mb-10" style="color: #008000">Groups of Plants</h1>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/indoorplant.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Indoor Plants</h2>
+                    <a href="https://youtube.com/shorts/giN6sLjFH08?si=pvYJ36CQnnGCiRwZ">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/medicinalplant.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Medicinal Plants</h2>
+                    <a href="https://youtube.com/shorts/rqT4kJgcvcI?si=JMPldWLeSgBJ_EgB">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/herbplant.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Herb Plants</h2>
+                    <a href="https://youtube.com/shorts/YYNRRTxtqFg?si=Kgwt9IGm6aFiyxmD">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/outdoorplant.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Outdoor Plants</h2>
+                    <a href="https://youtube.com/shorts/vRPrpwZJY3A?si=bZlRabVbg-Je46Cy">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/floweringplant.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Flowering Plants</h2>
+                    <a href="https://youtube.com/shorts/9NH0Go1VBPg?si=rbPmWi0ca7mQulXf">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/succulents.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Succulents & Cactus</h2>
+                    <a href="https://youtube.com/shorts/2lNW_NyPUkQ?si=75M6rX0Sb8iJ74Dz">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/airpurifyingplant.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Air Purifying Plant</h2>
+                    <a href="https://youtube.com/shorts/4sP5MRNBwAw?si=lEdYfRlBj9AaeiC_">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+                <div class="bg-white dark:bg-green-400 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                    <img src="./images/hangingplant.jpg" class="rounded-xl">
+                    <h2 class="font-semibold mt-2 mb-5">Hanging Plants</h2>
+                    <a href="https://youtube.com/shorts/VQehAVV9Znc?si=BIAr4eMgwX3X6TPQ">
+                        <button
+                            class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                            Watch Video
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!--review -->
+        <section class="text-center bg-green-400">
+            <div class="text-center   text-[#008000] mx-4">
+                <h1 class="text-4xl font-bold text-[black] mb-5 md:text-5xl pt-5">Customer Reviews</h1>
+                <div class="md:flex md:p-10 gap-9">
+                    <div class=" flex flex-col justify-center border-b mb-5 md:border md:border-[#008000] md:p-5">
+
+                        <h3 class="inline-block text-[black]">Mark shelly</h3>
+
+                        <p class="text-black">“Excellent quality plants and great service!”I ordered a few indoor and
+                            medicinal plants from Greenden PlantWorld, and I was really impressed with the quality.Each
+                            plant was fresh, healthy, and carefully packed. The delivery was quick, and the support team
+                            patiently guided me on plant care.</p>
+                    </div>
+                    <div class="  flex flex-col justify-center border-b mb-5 md:border md:border-[#008000] md:p-5">
+
+                        <h3 class="inline-block text-[black]">Jenny</h3>
+
+                        <p class="text-black">“A perfect destination for plant lovers 🌱”Greenden PlantWorld offers an
+                            amazing variety of plants, from indoor greens to beautiful flowering plants.The website is
+                            easy to use, and the ordering process was smooth. My plants arrived in excellent condition
+                            and added life to my home.
+                        </p>
+                    </div>
+                    <div class=" flex flex-col justify-center border-b  md:border md:border-[#008000] md:p-5">
+
+                        <h3 class="inline-block text-[black]">angelina</h3>
+
+                        <p class="text-black">“Trustworthy and customer-friendly!”The plants I received were exactly as
+                            shown on the website and were very healthy.What I loved the most was their customer support,
+                            which is available anytime to help with plant care and maintenance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="p-5 bg-black text-center">
+            <footer class="text-center mx-10">
+                <h1 class="text-3xl font-bold pl-11 text-[#008000] font-['Dosis'] md:text-5xl md:pl-15">GREENDEN <i
+                        class="fa-solid fa-leaf  pt-4" style="color: #008000"></i></h1>
+                <P class="text-white">Your go-to source for sustainable and eco-friendly plants and gardening products.
+                </P>
+                <div>
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #003011;"></i>
+                    <i class="fa-brands fa-facebook fa-lg" style="color: #003011;"></i>
+                    <i class="fa-brands fa-x-twitter fa-lg" style="color: #003011;"></i>
+                    <i class="fa-brands fa-youtube fa-lg" style="color: #003011;"></i>
+                </div>
+                <P class="text-teal-300">&COPY; 2026 Greenden.com</P>
+            </footer>
+        </section>
+
+
+
+
+    </div >
+</body >
+
+</html >

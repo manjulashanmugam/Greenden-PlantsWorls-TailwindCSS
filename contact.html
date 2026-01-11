@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <title>Greenden-PlantWorld</title>
+</head>
+
+<body>
+    <!--Responsive navbar-->
+    <div class="font-['EB Garamond']">
+        <nav class="bg bg-black p-3 flex items-center justify-between shadow-xl sticky top-0">
+            <h1 class="text-5xl" style="color: #008000">Greenden<a><i class="fa-solid fa-leaf fa-lg"
+                        style="color: #008000;"></i></a></h1>
+            <button id="menuBar">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 sm:hidden md:hidden text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <!-- JavaScript -->
+            <script>
+                const pages = ["contact.html", "product.html", "index.html"];
+
+                let clickCount = localStorage.getItem("clickCount");
+                clickCount = clickCount ? parseInt(clickCount) : 0;
+
+                document.getElementById("menuBar").onclick = () => {
+                    window.location.href = pages[clickCount];
+                    clickCount = (clickCount + 1) % pages.length;
+                    localStorage.setItem("clickCount", clickCount);
+                };
+            </script>
+
+            <ul class="flex gap-5 text-gray-600 hidden md:flex">
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-user fa-lg" style="color: white;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="product.html">
+                        <i class="fa-solid fa-cart-shopping fa-lg" style="color: white;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-address-book fa-lg" style="color: white;"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-[-100%] w-64 h-full bg-green-100 bg-black p-6 transition-all duration-500 z-50">
+            <button onclick="closeMenu()" class="mb-6 text-xl">✖</button>
+            <ul class="flex flex-col gap-6">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Product.html">Products</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+
+        <section class="bg-black ">
+            <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+                <h2 class="mb-4 text-6xl tracking-tight font-bold text-center text-gray-900" style="color: #008000;">
+                    Contact Us
+                </h2>
+                <p class="mb-8 lg:mb-16 font-light text-center text-white dark:text-white sm:text-xl">Got a technical
+                    issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us
+                    know.
+                </p>
+                <form action="#" class="space-y-8">
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white">Your
+                            email</label>
+                        <input type="email" id="email"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-green-400 dark:border-green-500 dark:placeholder-white dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            placeholder="name@flowbite.com" required>
+                    </div>
+                    <div>
+                        <label for="subject"
+                            class="block mb-2 text-sm font-medium text-white dark:text-white">Subject</label>
+                        <input type="text" id="subject"
+                            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-green-400 dark:border-green-500 dark:placeholder-white dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            placeholder="Let us know how we can help you" required>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="message" class="block mb-2 text-sm font-medium text-white dark:text-white">Your
+                            message</label>
+                        <textarea id="message" rows="6"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-green-400 dark:border-green-500 dark:placeholder-white dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="Leave a comment..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send
+                        message</button>
+                </form>
+            </div>
+        </section>
+        <!--footer-->
+        <section class="p-4 bg-black text-center">
+            <footer class="text-center mx-10">
+                <h1 class="text-3xl font-bold pl-11 text-[#008000] font-['Dosis'] md:text-5xl md:pl-15">GREENDEN <i
+                        class="fa-solid fa-leaf  pt-4" style="color: #008000"></i></h1>
+                <P class="text-white">Your go-to source for sustainable and eco-friendly plants and gardening products.
+                </P>
+                <div>
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #003011;"></i>
+                    <i class="fa-brands fa-facebook fa-lg" style="color: #003011;"></i>
+                    <i class="fa-brands fa-x-twitter fa-lg" style="color: #003011;"></i>
+                    <i class="fa-brands fa-youtube fa-lg" style="color: #003011;"></i>
+                </div>
+                <P class="text-teal-300">&COPY; 2026 Greenden.com</P>
+            </footer>
+        </section>
+
+
+</body>
+
+</html>
